@@ -18,12 +18,15 @@ describe("waci-pex digitalbazaar-mattr-digitalbazaar", () => {
   afterAll(async () => {
     fs.writeFile(
       "./src/__tests__/digitalbazaar-mattr-digitalbazaar/output.vax.json",
-      JSON.stringify({
-
-        verification,
-        verifiableCredential,
-        derivedCredential,
-      },null, 2),
+      JSON.stringify(
+        {
+          verification,
+          verifiableCredential,
+          derivedCredential,
+        },
+        null,
+        2
+      ),
       (err) => {
         if (err) console.error(err);
       }
