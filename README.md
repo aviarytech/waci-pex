@@ -6,4 +6,4 @@ The libraries under test are:
 * [@transmute/vc.js](https://github.com/transmute-industries/verifiable-data)
 * [@mattrglobal/jsonld-signatures-bbs](https://github.com/mattrglobal/jsonld-signatures-bbs)
 
-The folder names have been given a <issuer>-<deriver>-<verifier> structure
+The folder names have been given a `<issuer>`-`<deriver>`-`<verifier>` structure
