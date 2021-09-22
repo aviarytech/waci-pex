@@ -1,0 +1,59 @@
+{
+  "verification": {
+    "verified": false
+  },
+  "verifiableCredential": {
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+      "https://w3id.org/security/suites/bls12381-2020/v1",
+      {
+        "alsoKnownAs": "https://www.w3.org/ns/activitystreams#alsoKnownAs"
+      }
+    ],
+    "id": "http://example.edu/credentials/3732",
+    "type": "VerifiableCredential",
+    "credentialSubject": {
+      "alsoKnownAs": "did:example:ebfeb1f712ebc6f1c276e12ec21"
+    },
+    "issuanceDate": "2010-01-01T19:23:24Z",
+    "issuer": {
+      "id": "did:key:z5TcDJgBp1A6iGQkpyDP4LZmsgpWVBqBVs3KoqNDMLKH7nK8UETzM6V1Js28Awuzzd4pJQSsLofZvNNwLmpFDfbzZmMXJNEFT4EriZ1NXjGK7q96781MsG1S3J9f2AiPez6Ne7eCFVtgfR4GPAarS4RWuzPmbi1egGwWrykaft98UcKQucirFv9s2x5D32K54sjwSC2yM"
+    },
+    "proof": {
+      "type": "BbsBlsSignature2020",
+      "created": "2021-09-22T18:12:07Z",
+      "verificationMethod": "did:key:z5TcDJgBp1A6iGQkpyDP4LZmsgpWVBqBVs3KoqNDMLKH7nK8UETzM6V1Js28Awuzzd4pJQSsLofZvNNwLmpFDfbzZmMXJNEFT4EriZ1NXjGK7q96781MsG1S3J9f2AiPez6Ne7eCFVtgfR4GPAarS4RWuzPmbi1egGwWrykaft98UcKQucirFv9s2x5D32K54sjwSC2yM#zUC7KbUZckosdKwDffzDeYDQSb8sbYyfhZ96gA3tCSYqgv4G1pq6A8pvY1kJGV6dr8w8ScuqKGXL16KxsRDL7FGgoEJ2Z4udTMVMcfGrSgUH3chPAmJNk6TBQ5hgimjBGY68icw",
+      "proofPurpose": "assertionMethod",
+      "proofValue": "iJjhTFB+3q6DxrjoaSx1zO9VGogzyn+VwoXcPy1Lrfeb12TcdJDKvX8lj1ZfQMQ8UsgelRyasPqpvCYmQsGjiLwiNHwP6dlQG+Sml0+oso5RqzkGq+uAbduL2dvmxHcVTf8aULwBxOEiMVJocj+UEg=="
+    }
+  },
+  "derivedCredential": {
+    "items": [
+      {
+        "@context": [
+          "https://www.w3.org/2018/credentials/v1",
+          "https://w3id.org/security/suites/bls12381-2020/v1",
+          {
+            "alsoKnownAs": "https://www.w3.org/ns/activitystreams#alsoKnownAs"
+          }
+        ],
+        "id": "http://example.edu/credentials/3732",
+        "type": "VerifiableCredential",
+        "credentialSubject": {
+          "id": "urn:bnid:_:c14n0",
+          "alsoKnownAs": "did:example:ebfeb1f712ebc6f1c276e12ec21"
+        },
+        "issuanceDate": "2010-01-01T19:23:24Z",
+        "issuer": "did:key:z5TcDJgBp1A6iGQkpyDP4LZmsgpWVBqBVs3KoqNDMLKH7nK8UETzM6V1Js28Awuzzd4pJQSsLofZvNNwLmpFDfbzZmMXJNEFT4EriZ1NXjGK7q96781MsG1S3J9f2AiPez6Ne7eCFVtgfR4GPAarS4RWuzPmbi1egGwWrykaft98UcKQucirFv9s2x5D32K54sjwSC2yM",
+        "proof": {
+          "type": "sec:BbsBlsSignatureProof2020",
+          "nonce": "T81plEf7ykFpCyEkdcbIqQj6SysfmgObe8Vt2ZOZADNOEOB+F1ysMTNnEJkpo7Pd20A=",
+          "proofValue": "AAkB/4JVHcCE5GdfURha3IaLtcvP94YS5PGSQxZK4El+q0ejSJYPKzG6h4fpkl36oQRijoTuRkr5f8da+6dGWgueXKizFAD9Vm8gpOMD1K8H2jizL8H1csTWtFQH9BGsWObXQLEhz52a9vLBnOQavaXorWx9Vzjzavr9ItZolaOX4QYUxsi/LeTBujGBbTzsCtDH7QAAAHSQbv5/kh19s5wl4CgI5LNBuZUw8DBmPh65KBIChM4Eq3fNkbWhWwrg2/ea4vo7NP0AAAACZRLKby8aqpJdkmLt6ejBLyXZq67Zry+5eIUsUPFEBKpuTgKRVjcG18eQoYO15bNz4ds8PJaMdWEe+sI5Yy7F6646n8G8ytD4kU91vb86S2qor/+Z0tiIoinpWDCKb8HpRg8RPQHIwnODaWkYzCffYQAAAAI/ewY1gbQX1Y7Qiz/kRfZWZL16BXGkSVawkAH3jAdS114aci3AV4AsWvTrD8VeSa5VD5phMmP2vBgVtYZ0JU1C",
+          "verificationMethod": "did:key:z5TcDJgBp1A6iGQkpyDP4LZmsgpWVBqBVs3KoqNDMLKH7nK8UETzM6V1Js28Awuzzd4pJQSsLofZvNNwLmpFDfbzZmMXJNEFT4EriZ1NXjGK7q96781MsG1S3J9f2AiPez6Ne7eCFVtgfR4GPAarS4RWuzPmbi1egGwWrykaft98UcKQucirFv9s2x5D32K54sjwSC2yM#zUC7KbUZckosdKwDffzDeYDQSb8sbYyfhZ96gA3tCSYqgv4G1pq6A8pvY1kJGV6dr8w8ScuqKGXL16KxsRDL7FGgoEJ2Z4udTMVMcfGrSgUH3chPAmJNk6TBQ5hgimjBGY68icw",
+          "proofPurpose": "assertionMethod",
+          "created": "2021-09-22T18:12:07Z"
+        }
+      }
+    ]
+  }
+}

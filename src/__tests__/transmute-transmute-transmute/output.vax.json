@@ -1,0 +1,86 @@
+{
+  "verification": {
+    "verified": false
+  },
+  "verifiableCredential": {
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+      "https://w3id.org/security/suites/bls12381-2020/v1",
+      "https://w3id.org/vaccination/v1"
+    ],
+    "type": [
+      "VerifiableCredential",
+      "VaccinationCertificate"
+    ],
+    "id": "urn:uvci:af5vshde843jf831j128fj",
+    "name": "COVID-19 Vaccination Certificate",
+    "description": "COVID-19 Vaccination Certificate",
+    "issuanceDate": "2019-12-03T12:19:52Z",
+    "expirationDate": "2029-12-03T12:19:52Z",
+    "issuer": {
+      "id": "did:key:z5TcDJgBp1A6iGQkpyDP4LZmsgpWVBqBVs3KoqNDMLKH7nK8UETzM6V1Js28Awuzzd4pJQSsLofZvNNwLmpFDfbzZmMXJNEFT4EriZ1NXjGK7q96781MsG1S3J9f2AiPez6Ne7eCFVtgfR4GPAarS4RWuzPmbi1egGwWrykaft98UcKQucirFv9s2x5D32K54sjwSC2yM"
+    },
+    "credentialSubject": {
+      "type": "VaccinationEvent",
+      "batchNumber": "1183738569",
+      "administeringCentre": "MoH",
+      "healthProfessional": "MoH",
+      "countryOfVaccination": "NZ",
+      "recipient": {
+        "type": "VaccineRecipient",
+        "givenName": "JOHN",
+        "familyName": "SMITH",
+        "gender": "Male",
+        "birthDate": "1958-07-17"
+      },
+      "vaccine": {
+        "type": "Vaccine",
+        "disease": "COVID-19",
+        "atcCode": "J07BX03",
+        "medicinalProductName": "COVID-19 Vaccine Moderna",
+        "marketingAuthorizationHolder": "Moderna Biotech"
+      }
+    },
+    "proof": {
+      "type": "BbsBlsSignature2020",
+      "created": "2021-09-22T18:12:07Z",
+      "verificationMethod": "did:key:z5TcDJgBp1A6iGQkpyDP4LZmsgpWVBqBVs3KoqNDMLKH7nK8UETzM6V1Js28Awuzzd4pJQSsLofZvNNwLmpFDfbzZmMXJNEFT4EriZ1NXjGK7q96781MsG1S3J9f2AiPez6Ne7eCFVtgfR4GPAarS4RWuzPmbi1egGwWrykaft98UcKQucirFv9s2x5D32K54sjwSC2yM#zUC7KbUZckosdKwDffzDeYDQSb8sbYyfhZ96gA3tCSYqgv4G1pq6A8pvY1kJGV6dr8w8ScuqKGXL16KxsRDL7FGgoEJ2Z4udTMVMcfGrSgUH3chPAmJNk6TBQ5hgimjBGY68icw",
+      "proofPurpose": "assertionMethod",
+      "proofValue": "qKtBqZ4DP4cCwslO/an/aW3WQtumNZUN6MR2YC3WnQXN/zA7x8E5Uxbg2A/UDbAAL0yzxKlMJN474Q42eK0xhJt0VoOSCYAlM06pd6L2pqU9nL2qCQ+lfZAgu42/Z015hs+saebOyfo/wA4znFBExQ=="
+    }
+  },
+  "derivedCredential": {
+    "items": [
+      {
+        "@context": [
+          "https://www.w3.org/2018/credentials/v1",
+          "https://w3id.org/security/suites/bls12381-2020/v1",
+          "https://w3id.org/vaccination/v1"
+        ],
+        "id": "urn:uvci:af5vshde843jf831j128fj",
+        "type": [
+          "VaccinationCertificate",
+          "VerifiableCredential"
+        ],
+        "description": "COVID-19 Vaccination Certificate",
+        "name": "COVID-19 Vaccination Certificate",
+        "credentialSubject": {
+          "id": "urn:bnid:_:c14n2",
+          "type": "VaccinationEvent",
+          "countryOfVaccination": "NZ"
+        },
+        "expirationDate": "2029-12-03T12:19:52Z",
+        "issuanceDate": "2019-12-03T12:19:52Z",
+        "issuer": "did:key:z5TcDJgBp1A6iGQkpyDP4LZmsgpWVBqBVs3KoqNDMLKH7nK8UETzM6V1Js28Awuzzd4pJQSsLofZvNNwLmpFDfbzZmMXJNEFT4EriZ1NXjGK7q96781MsG1S3J9f2AiPez6Ne7eCFVtgfR4GPAarS4RWuzPmbi1egGwWrykaft98UcKQucirFv9s2x5D32K54sjwSC2yM",
+        "proof": {
+          "type": "sec:BbsBlsSignatureProof2020",
+          "nonce": "OOS13kya5c9B6yexFEeJNke90hyA1THr/PlY2A4K/6PNYIrlyqC+Yxc5gImaalGliW8=",
+          "proofValue": "AB0EQA//uWe7JYBhWefMOoB4NayWPDbqIbfsy+ufilEmz/RGpRj0blynzGJycPPcLZmpFrZyi6cTdtg8glJW+24tGS+zpfQZiBDk4Xs30jhmACndNu7ZynKCUS34uPP1Og8AFBvApYy0tivuPnDtxUTK6JXSgZ34I9Ex3RexlNBVYKNTbISkgvw9bvX7qRN29bOndzRgAAAAdKlOYEMAABr5VYaVk7i4P9peOto5hW1rtaVOoL6Zaq/uFv/DW6XhpZ2WasUHrQhSowAAAAJJl4w7k5K5mNowyEO8jC4Vqb0+EM68OrxhR7Qtn4HBBGL+H9lc+gc6VYHaC6p1DQ3Ny1ePZymUDsygUkfdkaObkeYqJGiHHneXaXtW0XwV0cqG4NwO5wIbPG6PQzB8zpFzlHvohN2QmnW35tNbSC8jAAAAESIdgWb7Kd42JtNPmQcFYRecLntgZF4Pm+Pn26RizmAsM5NaHo4crufcMZoSgPA7qot7wpgW/HtaQ4JLQ5Rr61snfN6FsgTSQOlBCI3q5t5wD8lovutrzE+NKXKb86ghYy3vsNVbseoZgapOmGOufaLQ2aoEz/K9RWza7o+5CkB9O13YQLfHRn/cvcPyo1ueuqEtWBpydCjzEKC/qTDEKstFph/eQ65JqdQOkJ4lm/uiVWxczz3seIo0EtWoWo8wdAUuBuPaMEsFj/J76a0znskuHaZplJCE9RpUUPICmS24UUXKHl6dZ3qf53N4P707SpjaMo+MRZREMSihmzRU6y8sri98leW7SAKs/JILMiByT06zX62TWAGEqTqFfXTEmk060dLoAdthXjyY7RKvMw/1NFk62LoOnm15CvQ3J8pXSk6gF2PZ4Vwf/azHg4UNTnRyQCOffM1firqblN80fnAN9b1/dYc4j/2KM0LXLZzhMfUUZSY+ZZ4dVckbyu5/oz2OaqbMoxYhRYI4DrF1+p06YIrAALu6RNFqhX2unl6MRyAoOsNEURlg6he/ZNHO5H/HLtglMtRjnIGtHgt17PEz3hTGsWd8apkKGYXfnkB69CubC2x3u+OLUfOlTHEBphq3lArmG0qp6ivoyGaOu0ejiey19a4ZzeX8EIBRtpYSHrAx0j23C+SUooU+kjjHEMdws0Jfca3Frig/Fkd3PiI=",
+          "verificationMethod": "did:key:z5TcDJgBp1A6iGQkpyDP4LZmsgpWVBqBVs3KoqNDMLKH7nK8UETzM6V1Js28Awuzzd4pJQSsLofZvNNwLmpFDfbzZmMXJNEFT4EriZ1NXjGK7q96781MsG1S3J9f2AiPez6Ne7eCFVtgfR4GPAarS4RWuzPmbi1egGwWrykaft98UcKQucirFv9s2x5D32K54sjwSC2yM#zUC7KbUZckosdKwDffzDeYDQSb8sbYyfhZ96gA3tCSYqgv4G1pq6A8pvY1kJGV6dr8w8ScuqKGXL16KxsRDL7FGgoEJ2Z4udTMVMcfGrSgUH3chPAmJNk6TBQ5hgimjBGY68icw",
+          "proofPurpose": "assertionMethod",
+          "created": "2021-09-22T18:12:07Z"
+        }
+      }
+    ]
+  }
+}
