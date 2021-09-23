@@ -58,7 +58,7 @@ describe("waci-pex transmute-transmute-transmute", () => {
       documentLoader: fixtures.documentLoader,
       suite: new BbsBlsSignatureProof2020() as Suite,
     });
-    derivedCredential = result;
+    derivedCredential = result.items[0];
     expect(result.items[0].proof.type).toBe("BbsBlsSignatureProof2020");
   });
 

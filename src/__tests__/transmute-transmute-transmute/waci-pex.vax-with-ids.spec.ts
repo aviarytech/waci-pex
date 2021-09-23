@@ -16,7 +16,7 @@ describe("waci-pex transmute-transmute-transmute", () => {
 
   afterAll(async () => {
     fs.writeFile(
-      "./src/__tests__/transmute-transmute-transmute/output.vax.json",
+      "./src/__tests__/transmute-transmute-transmute/output.vax-with-ids.json",
       JSON.stringify(
         {
           verification,
@@ -35,7 +35,7 @@ describe("waci-pex transmute-transmute-transmute", () => {
     const key = fixtures.keys.bls;
     const result = await verifiable.credential.create({
       credential: {
-        ...fixtures.credentials.vax,
+        ...fixtures.credentials.vaxWithIds,
         issuer: { id: fixtures.keys.bls.controller }, // make sure issuer is set correctly
       },
       format: ["vc"],

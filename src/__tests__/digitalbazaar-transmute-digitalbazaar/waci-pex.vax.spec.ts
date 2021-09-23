@@ -34,26 +34,24 @@ describe("waci-pex digitalbazaar-transmute-digitalbazaar", () => {
   });
   it("can create credential", async () => {
     const key = fixtures.keys.bls as Bls12381G2Key2020;
-    verifiableCredential = await vc.issue(
-      {
+    verifiableCredential = await vc.issue({
+      credential: {
         ...fixtures.credentials.vax,
         issuer: { id: fixtures.keys.bls.controller }, // make sure issuer is set correctly
       },
-      {
-        documentLoader: fixtures.documentLoader,
-        suite: new BbsBlsSignature2020({
-          key: await Bls12381G2KeyPair.from(key),
-          date: fixtures.credentials.vax.issuanceDate,
-        }) as any,
-      }
-    );
+      documentLoader: fixtures.documentLoader,
+      suite: new BbsBlsSignature2020({
+        key: await Bls12381G2KeyPair.from(key),
+        date: fixtures.credentials.vax.issuanceDate,
+      }) as any,
+    });
 
     expect(verifiableCredential.proof.type).toBe("BbsBlsSignature2020");
   });
 
   it("can derive credential", async () => {
     const result = await verifiable.credential.derive({
-      credential: fixtures.verifiableCredentials.vax,
+      credential: verifiableCredential,
       frame: fixtures.frames.vax,
       documentLoader: fixtures.documentLoader,
       suite: new BbsBlsSignatureProof2020(),
@@ -64,7 +62,7 @@ describe("waci-pex digitalbazaar-transmute-digitalbazaar", () => {
   });
 
   it("can verify derived credential", async () => {
-    verification = await vc.verifyCredential(fixtures.derivedCredentials.vax, {
+    verification = await vc.verifyCredential(derivedCredential, {
       documentLoader: fixtures.documentLoader,
       suite: new BbsBlsSignatureProof2020(),
     });

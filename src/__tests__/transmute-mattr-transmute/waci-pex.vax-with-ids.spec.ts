@@ -2,6 +2,7 @@ import { Bls12381G2KeyPair } from "@mattrglobal/bls12381-key-pair";
 import {
   BbsBlsSignature2020,
   BbsBlsSignatureProof2020,
+  deriveProof,
 } from "@mattrglobal/jsonld-signatures-bbs";
 
 import { verifiable } from "@transmute/vc.js";
@@ -9,14 +10,14 @@ import { Suite } from "@transmute/vc.js/dist/types/Suite";
 import * as fixtures from "../__fixtures__";
 import fs from "fs";
 
-describe("waci-pex transmute-transmute-transmute", () => {
+describe("waci-pex transmute-mattr-transmute", () => {
   let verifiableCredential: any;
   let derivedCredential: any;
   let verification: any;
 
   afterAll(async () => {
     fs.writeFile(
-      "./src/__tests__/transmute-transmute-transmute/output.vax.json",
+      "./src/__tests__/transmute-mattr-transmute/output.vax-with-ids.json",
       JSON.stringify(
         {
           verification,
@@ -35,7 +36,7 @@ describe("waci-pex transmute-transmute-transmute", () => {
     const key = fixtures.keys.bls;
     const result = await verifiable.credential.create({
       credential: {
-        ...fixtures.credentials.vax,
+        ...fixtures.credentials.vaxWithIds,
         issuer: { id: fixtures.keys.bls.controller }, // make sure issuer is set correctly
       },
       format: ["vc"],
@@ -52,14 +53,16 @@ describe("waci-pex transmute-transmute-transmute", () => {
   });
 
   it("can derive credential", async () => {
-    const result = await verifiable.credential.derive({
-      credential: verifiableCredential,
-      frame: fixtures.frames.vax,
-      documentLoader: fixtures.documentLoader,
-      suite: new BbsBlsSignatureProof2020() as Suite,
-    });
-    derivedCredential = result.items[0];
-    expect(result.items[0].proof.type).toBe("BbsBlsSignatureProof2020");
+    const result = await deriveProof(
+      verifiableCredential,
+      fixtures.frames.vax,
+      {
+        documentLoader: fixtures.documentLoader,
+        suite: new BbsBlsSignatureProof2020() as Suite,
+      }
+    );
+    derivedCredential = result;
+    expect(result.proof.type).toBe("BbsBlsSignatureProof2020");
   });
 
   it("can verify derived credential", async () => {
