@@ -1,3 +1,4 @@
 import vax from "./vax.json";
 import simple from "./simple.json";
-export default { vax, simple };
+import vaxWithIds from "./vax-with-ids.json";
+export default { vax, simple, vaxWithIds };
